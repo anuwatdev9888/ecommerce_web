@@ -124,6 +124,7 @@ label a{
 
 /* alert-box */
 
+/* ปรับแต่กล่อง error */
 .alert-box{
     width: 300px;
     min-height: 150px;
@@ -131,11 +132,19 @@ label a{
     border-radius: 10px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
+    opacity: 0;
+    pointer-events: none;
     transition: 1s;
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
 }
 
 .alert-img{
